@@ -17,6 +17,8 @@ jobs:
           cache: 'npm'
           cache-dependency-path: ./.github/actions/joke-action/package-lock.json
       - name: Install dependencies
-        run: npm ci -w ./github/actions/joke-action
+        run: |
+          cd ./github/actions/joke-action
+          npm ci
       - name: ha-ha
         uses: ./.github/actions/joke-action
