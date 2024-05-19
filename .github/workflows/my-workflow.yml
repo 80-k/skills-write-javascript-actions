@@ -14,7 +14,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-      - name: install dependencies
-        run: npm ci
+          cache: 'npm'
+          cache-dependency-path: ./.github/actions/joke-action/package-lock.json
       - name: ha-ha
         uses: ./.github/actions/joke-action
