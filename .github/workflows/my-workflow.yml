@@ -17,4 +17,4 @@ jobs:
       - name: show output
         run: echo $JOKE
         env:
-          JOKE: ${{ steps.get-joke.output.joke-output}}
+          JOKE: ${{ steps.get-joke.outputs.joke-output}}
